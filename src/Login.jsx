@@ -6,7 +6,7 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-
+ const API = import.meta.env.VITE_API_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -14,7 +14,7 @@ function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        `${API}/api/auth/login`,
         {
           email,
           password,
