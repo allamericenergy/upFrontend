@@ -14,7 +14,7 @@ function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        `${API}/api/auth/login`,
+        `https://upnewbackend-c6dze8f9hzh0ctd8.centralus-01.azurewebsites.net/api/auth/login`,
         {
           email,
           password,
